@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxt/test-utils/module',
-    'nuxt-primevue'
+    'nuxt-primevue',
+    '@pinia/nuxt'
   ],
   css: ['primevue/resources/themes/aura-dark-green/theme.css']
 })
