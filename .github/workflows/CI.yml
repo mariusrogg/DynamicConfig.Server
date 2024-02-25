@@ -28,6 +28,6 @@ jobs:
       - name: Install Dependencies
         run: bun install
       - name: Run ESLint
-        run: eslint
+        run: bun lint
       - name: Run Unit-Tests
         run: bun vitest
