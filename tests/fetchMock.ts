@@ -1,6 +1,6 @@
 export function createFetchMock(callback: (url: unknown) => any) {
-    global.$fetch = callback
+  global.$fetch = callback;
 }
 export function clearFetchMock() {
-    global.$fetch = null
+  global.$fetch = null;
 }
