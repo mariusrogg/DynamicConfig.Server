@@ -3,8 +3,10 @@ export default function (edgePath: string | undefined) : Promise<unknown> | unde
     const { name, parameterPath } = splitEdgePath(edgePath)
     let response: Promise<unknown> | undefined
     if (name) {
-        // ToDo: get hostname by name
-        response = $fetch(`http://${name}/Parameter?path=/${parameterPath}`)
+        const url = getEdgeUrl(name)
+        if (url){
+            response = $fetch(`${url}/Parameter?path=/${parameterPath}`)
+        }
     }
     return response
 }
