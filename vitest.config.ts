@@ -1,4 +1,5 @@
 import { defineVitestConfig } from '@nuxt/test-utils/config'
+import { configDefaults } from 'vitest/config'
 
 export default defineVitestConfig({
   // any custom Vitest config you require
@@ -9,7 +10,11 @@ export default defineVitestConfig({
     },
     coverage: {
       provider: 'v8',
-      enabled: true
-    },
+      enabled: true,
+      exclude: [
+        ...configDefaults.coverage.exclude || [],
+        '**/nuxt.config.ts'
+      ]
+    }
   }
 })
