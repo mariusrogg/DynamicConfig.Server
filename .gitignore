@@ -25,3 +25,7 @@ logs
 
 # bun lock file
 bun.lockb
+
+# test coverage
+coverage
+html
