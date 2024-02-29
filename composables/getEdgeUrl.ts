@@ -3,9 +3,9 @@ export default function (name: string | undefined): string | undefined {
   let url: string | undefined = undefined;
   if (name) {
     const edgeStore = useEdgesStore();
-    const edge: Edge | undefined = edgeStore.getEdge(name);
+    const edge: IEdge | undefined = edgeStore.getEdge(name);
     if (edge) {
-      url = `${edge.scheme}://${edge.hostname}:${edge.port}`;
+      url = edge.getUrl();
     }
   }
   return url;
