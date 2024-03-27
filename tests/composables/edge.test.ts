@@ -11,7 +11,7 @@ it.each([
   "getUrl(name: $name, hostname: $hostname, scheme: $scheme, port: $port)",
   ({ name, hostname, scheme, port }) => {
     const edge: Edge = new Edge(name, hostname, scheme, port);
-    if (name && hostname) {
+    if (hostname) {
       expect(edge.getUrl()).toBe(
         `${scheme ? scheme : "http"}://hostname:${port ? port : 80n}`,
       );
