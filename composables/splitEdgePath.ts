@@ -1,9 +1,4 @@
 // Extracts edge name and parameter path out of path to edge's parameters
-/**
- * Split path of edge in name and parameter path
- * @param edgePath Path to the parameter
- * @returns Name of the edge and path to parameter
- */
 export default function (edgePath: string | undefined) {
   let name: string | undefined;
   let parameterPath: string = "";
