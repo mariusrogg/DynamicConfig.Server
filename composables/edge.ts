@@ -24,7 +24,7 @@ export class Edge implements IEdge {
   }
   getUrl(): string | undefined {
     let url: string | undefined = undefined;
-    if (this.name && this.hostname) {
+    if (this.hostname) {
       url = `${this.scheme}://${this.hostname}:${this.port}`;
     }
     return url;
