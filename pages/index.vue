@@ -1,4 +1,4 @@
 <template>
-    <p>Hello</p>
-    <SequenceControl/>
+  <p>Hello</p>
+  <SequenceControl />
 </template>
