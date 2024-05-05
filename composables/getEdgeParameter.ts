@@ -1,12 +1,11 @@
-export default function (
-  edgePath: string | undefined,
-): Promise<unknown> | undefined {
+export default function (edgePath: string | undefined): any {
   const { name, parameterPath } = splitEdgePath(edgePath);
-  let response: Promise<unknown> | undefined;
+  let response: any;
   if (name) {
     const url = getEdgeUrl(name);
     if (url) {
-      response = $fetch(`${url}/Parameter?path=/${parameterPath}`);
+      const { data } = useFetch(`${url}/Parameter?path=/${parameterPath}`);
+      response = data;
     }
   }
   return response;

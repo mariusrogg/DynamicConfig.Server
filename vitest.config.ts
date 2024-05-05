@@ -4,7 +4,7 @@ import { configDefaults } from "vitest/config";
 export default defineVitestConfig({
   // any custom Vitest config you require
   test: {
-    environment: "happy-dom",
+    environment: "nuxt",
     alias: {
       "@/": new URL(".", import.meta.url).pathname,
     },

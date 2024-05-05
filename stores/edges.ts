@@ -1,10 +1,12 @@
+import { Edge } from "#imports";
+
 export const useEdgesStore = defineStore("edges", {
   state: () => ({
-    edges: [new Edge("undefined", "esp32-0a58d8")] as IEdge[],
+    edges: new Map<string, Edge>() as Map<string, Edge>,
   }),
-  actions: {
-    getEdge(name: string): IEdge | undefined {
-      return this.edges.find((e) => e.name == name);
+  getters: {
+    getEdgeByName: (state) => {
+      return (name: string): Edge | undefined => state.edges.get(name);
     },
   },
 });
