@@ -16,22 +16,6 @@
       "runOptions": {
         "runOn": "folderOpen"
       }
-    },
-    {
-      "label": "Start tests",
-      "type": "shell",
-      "command": "bun vitest --ui",
-      "windows": {
-        "command": "bun vitest --ui"
-      },
-      "group": "none",
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      },
-      "runOptions": {
-        "runOn": "folderOpen"
-      }
     }
   ]
 }

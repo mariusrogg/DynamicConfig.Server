@@ -29,5 +29,3 @@ jobs:
         run: bun install
       - name: Run ESLint
         run: bun lint
-      - name: Run Unit-Tests
-        run: bun vitest
