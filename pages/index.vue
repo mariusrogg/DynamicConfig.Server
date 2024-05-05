@@ -4,6 +4,7 @@
     <ClientOnly>
       <p>{{ data }}</p>
     </ClientOnly>
+    <SequenceControl />
   </div>
 </template>
 
